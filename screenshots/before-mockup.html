@@ -1,50 +1,62 @@
-# Navigate to your project folder
-cd ~/Desktop/workshop_booking
-
-# Check current file types
-file screenshots/after-mockup.html
-file screenshots/before-mockup.html
-
-# If they show as text, let's ensure they have proper HTML content
-echo '<!DOCTYPE html>
-<html>
-<head>
-    <title>After - Enhanced Design</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <span class="navbar-brand">Enhanced Navigation</span>
-        </div>
-    </nav>
-    <div class="container mt-4">
-        <h2>Improved Design (After)</h2>
-        <p>• Bootstrap 5</p>
-        <p>• Mobile-responsive</p>
-        <p>• Modern design</p>
-        <button class="btn btn-primary btn-lg">Large Mobile Button</button>
-    </div>
-</body>
-</html>' > screenshots/after-mockup.html
-
-echo '<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Before - Original Design</title>
     <style>
-        body { font-family: Arial; padding: 20px; }
-        .nav { background: #333; color: white; padding: 10px; }
-        .content { margin: 20px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .mobile-warning {
+            color: #dc3545;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="nav">Basic Navigation</div>
-    <div class="content">
-        <h2>Original Design (Before)</h2>
-        <p>• Bootstrap 4</p>
-        <p>• Limited mobile support</p>
-        <p>• Basic styling</p>
+    <div class="navbar">
+        <h2>Workshop Booking System (Original)</h2>
+    </div>
+    
+    <div class="container">
+        <h3>Before Improvements</h3>
+        <ul>
+            <li>Bootstrap 4 Framework</li>
+            <li class="mobile-warning">Limited Mobile Responsiveness</li>
+            <li>Basic Navigation Structure</li>
+            <li>Standard Form Elements</li>
+            <li>Fixed-width Design</li>
+        </ul>
+        
+        <h4>Mobile Issues:</h4>
+        <ul>
+            <li>Small touch targets</li>
+            <li>Text readability problems</li>
+            <li>Horizontal scrolling required</li>
+            <li>Poor navigation experience</li>
+        </ul>
+        
+        <button class="btn">Small Button</button>
     </div>
 </body>
-</html>' > screenshots/before-mockup.html
+</html>
