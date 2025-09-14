@@ -34,7 +34,7 @@
 
 <body>
 {% block header %}
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
         {% if user.is_authenticated %}
         <a class="navbar-brand text-white" href="{% url 'workshop_app:index' %}">FOSSEE Workshops</a>
         {% else %}
